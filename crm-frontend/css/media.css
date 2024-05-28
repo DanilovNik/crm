@@ -1,0 +1,60 @@
+@media all and (max-width: 1024px) {
+    .header {
+        padding: 0 10px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .header__container {
+        padding: 9px 0;
+        justify-content: center;
+    }
+
+    .header__logo {
+        margin: 0;
+    }
+
+    .header__logo-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .modal__content {
+        max-width: 375px;
+    }
+
+    .header__form {
+        display: none;
+    }
+
+    .clients {
+        padding-top: 70px;
+    }
+
+    .modal__form {
+        width: 315px;
+    }
+
+    .contact {
+        width: 355px;
+    }
+}
+
+@media all and (max-width: 390px) {
+    .modal__content {
+        max-width: 315px;
+    }
+
+    .modal__form {
+        width: 255px;
+    }
+
+    .contact {
+        width: 280px;
+    }
+
+    .delete-modal__content {
+        min-width: 270px;
+    }
+}
+

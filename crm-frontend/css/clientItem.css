@@ -1,0 +1,161 @@
+.clients__table {
+  width: 100%;
+  min-width: 964px;
+  margin-bottom: 40px;
+}
+
+.client__item {
+  display: flex;
+  padding: 18px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--contact-background);
+}
+
+.client__id {
+  width: 7%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--txt-grey);
+}
+
+.client__full-name {
+  width: calc(21% + 5px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  color: var(--black);
+}
+
+.client__full-name span {
+  display: inline-block;
+}
+
+.client__full-name span:not(:last-child) {
+  margin-right: 5px;
+}
+
+.client__creation {
+  width: calc(20% - 1px);
+  padding-left: 14px;
+}
+
+.client__last-update {
+  width: calc(15% + 6px);
+  padding-left: 14px;
+}
+
+.creation__date,
+.last-update__date {
+  margin-right: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--black);
+}
+
+.creation__time,
+.last-update__time {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--txt-grey);
+}
+
+.client__contacts {
+  max-width: 120px;
+  min-width: 120px;
+  margin: -10px 30px -17px 0;
+  padding-left: 29px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.client__actions {
+  width: 21%;
+  display: flex;
+  align-items: center;
+}
+
+.client__actions button {
+  display: inline-block;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-color: transparent;
+  padding-left: 20px;
+  color: var(--black);
+}
+
+.clients__edit-btn {
+  position: relative;
+  margin-right: 32px;
+  background-image: url(../img/svg/pencil.svg);
+  transition: color .3s ease-in-out;
+}
+
+.clients__delete-btn {
+  position: relative;
+  margin-right: 32px;
+  background-image: url(../img/svg/delete.svg);
+  transition: color .3s ease-in-out;
+}
+
+.clients__edit-btn:hover {
+  color: var(--firm);
+}
+
+.clients__delete-btn:hover {
+  color: var(--red);
+}
+
+.contact__link {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  position: relative;
+}
+
+.contact__link g,
+.contact__link path {
+  transition: opacity .3s ease-in-out;
+}
+
+.contact__link:hover g,
+.contact__link:hover path {
+  opacity: 1;
+}
+
+.action-delay {
+  background-image: none;
+}
+
+.actions__spinner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spinner .3s ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.clients__edit-btn .actions__spinner svg {
+  stroke: var(--firm);
+}
+
+.clients__delete-btn .actions__spinner svg {
+  stroke: var(--red);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

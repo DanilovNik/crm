@@ -1,0 +1,162 @@
+.clients {
+    padding: 130px 0 40px 0;
+}
+
+.clients__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--black);
+}
+
+.clients__wrapper {
+    position: relative;
+    overflow: auto;
+}
+
+.thead-descr {
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.thead-descr__item--id,
+.thead-descr__sorting {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--firm);
+}
+
+.thead-descr__item:not(:first-child) {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--txt-grey);
+}
+
+.thead-descr__item--id,
+.thead-descr__item--name,
+.thead-descr__item--creation,
+.thead-descr__item--edit {
+    cursor: pointer;
+    user-select: none;
+}
+
+.thead-descr__item--id {
+    padding-right: 13px;
+    background-position: right center;
+}
+
+.thead-descr__item--name {
+    padding-left: 31px;
+    background-position: right 15px center;
+}
+
+.thead-descr__item--creation {
+    position: relative;
+    padding-right: 70px;
+    padding-left: 43px;
+}
+
+.thead-descr__item--creation::before {
+    content: 'создания';
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 13px;
+}
+
+.thead-descr__item--edit {
+    position: relative;
+    padding-right: 80px;
+    padding-left: 30px;
+    margin-right: 28px;
+}
+
+.thead-descr__item--edit::before {
+    content: 'изменения';
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 13px;
+}
+
+.thead-descr__item--contacts {
+    padding-left: 13px;
+}
+
+.thead-descr__item--actions {
+    padding-left: 60px;
+}
+
+.thead-descr__sorting {
+    padding-left: 11px;
+    font-size: 10px;
+}
+
+.clients__btn {
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    border: 1px solid var(--firm);
+    padding: 12px 29px;
+    width: 226px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: var(--firm);
+    transition: color .4s ease-in-out, background-color .4s ease-in-out;
+}
+
+.clients__btn:hover {
+    color: var(--white);
+    background-color: var(--firm);
+}
+
+.clients__btn svg {
+    margin-right: 10px;
+    fill: var(--firm);
+    transition: fill .4s ease-in-out;
+}
+
+.clients__btn:hover svg {
+    fill: var(--white);
+}
+
+.creation-span,
+.edit-span {
+    display: inline-block;
+    width: 9px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    background-image: url(../img/svg/arrow/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sort-up,
+.sort-down {
+    background-repeat: no-repeat;
+}
+
+.sort-up {
+    background-image: url(../img/svg/arrow/arrow-up.svg);
+}
+
+.sort-down {
+    background-image: url(../img/svg/arrow/arrow-down.svg);
+}
+
+.thead-descr__item--creation,
+.thead-descr__item--edit {
+    background-image: none;
+}

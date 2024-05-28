@@ -1,0 +1,239 @@
+.modal__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--black);
+}
+
+.modal__id {
+  padding-left: 9px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--txt-grey);
+}
+
+.modal__close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url(../img/svg/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.modal__close-btn:hover {
+  background-image: url(../img/svg/cross-red.svg);
+}
+
+.modal__form {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-floating>label {
+  height: 100%;
+  padding-top: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  color: var(--txt-grey);
+}
+
+.form-floating>.modal__input:focus~label,
+.form-floating>.modal__input:not(:placeholder-shown)~label {
+  top: -10px;
+  transform: scale(0.85) translate(0.15rem, -0.5rem);
+}
+
+.modal__input {
+  width: 100%;
+  height: 25px;
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--grey);
+}
+
+.modal__input::placeholder {
+  font-size: 0;
+}
+
+.modal__form button {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal__contacts {
+  margin: 0 -30px;
+  margin-bottom: 25px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey);
+}
+
+.modal__add-btn {
+  position: relative;
+  padding-left: 16px;
+  border: none;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--black);
+  transition: color 0.3s ease-in-out;
+  display: none;
+}
+
+.modal__add-btn:hover {
+  color: var(--firm);
+}
+
+.modal__add-btn.modal__add-btn--active {
+  display: flex;
+}
+
+.btn-contact__svg {
+  width: 15px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  fill: var(--firm);
+}
+
+.btn-contact__svg--hover,
+.btn-contact__svg--def {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.btn-contact__svg--hover.btn-contact__svg--active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.btn-contact__svg--def.btn-contact__svg--active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal__label>span {
+  color: var(--firm);
+}
+
+.modal__save-btn {
+  width: 147px;
+  height: 44px;
+  padding: 14px 35px;
+  margin-bottom: 8px;
+  position: relative;
+  align-self: center;
+  background: var(--firm);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: var(--white);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal__save-btn:hover {
+  opacity: 0.7;
+}
+
+.modal__cancel-btn {
+  padding-bottom: 1px;
+  align-self: center;
+  font-weight: 400;
+  font-size: 12px;
+  border-bottom: 1px solid var(--black);
+  text-decoration-skip-ink: none;
+  color: var(--black);
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.modal__cancel-btn:hover {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+}
+
+.modal-active {
+  animation: fade 0.3s ease-in-out 0.3s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal__error {
+  max-width: 255px;
+  margin: 0;
+  margin-top: -17px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  align-self: center;
+  color: var(--red);
+}
+
+.modal__spinner {
+  position: absolute;
+  display: none;
+  top: 13px;
+  left: 13px;
+  animation: spinner .3s ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.modal__spinner svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--white);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

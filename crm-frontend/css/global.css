@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #333;
+    --green: #34c759;
+    --orange: #e6b127;
+    --red: #f06a4d;
+    --firm: #9873ff;
+    --grey: #c8c5d1;
+    --background: #f5f5f5;
+    --modal-background: #00000080;
+    --contact-background: #e7e5eb;
+    --block-background: #f4f3f6;
+    --txt-grey: #b0b0b0;
+    --hover: #b89eff;
+    --active: #8052ff;
+
+    --font-family: "Open Sans", sans-serif;
+}
+
+/* common specification */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family), sans-serif;
+    background-color: var(--background);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 994px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.btn-reset {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.app-btn {
+    background: var(--firm);
+    color: var(--white);
+}
+
+.app-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: auto;
+    cursor: pointer;
+    background: var(--modal-background);
+    opacity: 0;
+}
+
+.app-modal__content {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: auto;
+    opacity: 0;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+    background-color: var(--white);
+}
+
+.app-tooltip {
+    padding: 7px 17px;
+    position: absolute;
+    top: -41px;
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--black);
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.app-tooltip::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 0, 0 0, 51% 100%);
+    background-color: var(--black); 
+}

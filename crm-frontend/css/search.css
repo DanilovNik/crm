@@ -1,0 +1,37 @@
+.header__inner {
+    position: relative;
+    width: 100%;
+}
+
+.search-list {
+    max-width: 581px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    position: absolute;
+    list-style-type: none;
+    top: 45px;
+    left: 0;
+    z-index: 5;
+    background-color: var(--white);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+}
+
+.search-list__link:not(:last-child) {
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--grey);
+}
+
+.search-list__link:active {
+    color: var(--active);
+}
+
+.hide {
+    display: none;
+}
+
+mark {
+    color: var(--white);
+    background-color: var(--firm);
+}

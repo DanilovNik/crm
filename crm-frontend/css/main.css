@@ -1,0 +1,14 @@
+@import url(../css/normalize.css);
+@import url(../css/global.css);
+
+@import url(../css/header.css);
+@import url(../css/clients.css);
+@import url(../css/modal.css);
+@import url(../css/contact.css);
+@import url(../css/clientItem.css);
+@import url(../css/deleteModal.css);
+@import url(../css/tooltip.css);
+@import url(../css/preloader.css);
+@import url(../css/search.css);
+
+@import url(../css/media.css);
